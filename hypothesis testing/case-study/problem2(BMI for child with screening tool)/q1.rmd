@@ -1,0 +1,68 @@
+---
+title: "Assigment 3"
+output:
+  pdf_document:
+    toc: true
+    highlight: zenburn
+  html_document:
+    toc: true
+    theme: united
+---
+
+Question 1:
+
+$$
+H_{0}: BMI_{\text{active-screen}} = 17.6
+$$
+
+The null hypothesis predicts that the BMI of school-age children who have a typical daily screentime of more than 6h will not differ from the ‘normal’ midpoint for school-age children.
+
+$$
+H_{A}: BMI_{\text{active-screen}} > 17.6
+$$
+
+The alternative hypothesis predicts that the BMI of school-age children who have a typical daily screentime of more than 6h will above the ‘normal’ midpoint for school-age children.
+
+Question 2:
+
+The assumptions that the groups are independent is upheld because each individual has a typical daily screentime of more than 6h or not.
+
+Since the sample size is small, it is very important that the data come from a normal, Gaussian distribution bell curve.
+
+```{r , message=FALSE}
+# Load necessary libraries 
+library(dplyr) 
+library(ggplot2)
+
+# Read the CSV file (replace with actual file path)
+data <- read.csv("D:/work/stats/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
+
+# Filter the data to children with more than 6 hours of screen time
+group_high_screen <- data %>%
+  filter(screen > 6)
+
+# Shapiro-Wilk test for normality
+shapiro.test(group_high_screen$BMI)
+```
+
+Since p-value is greater than 0.05, the data to children with more than 6 hours of screen time is normally distributed.
+
+Question 3:
+
+```{r}
+# Load necessary libraries
+library(dplyr)
+
+# Read the dataset
+data <- read.csv("D:/work/stats/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
+
+# Filter the data to children with more than 6 hours of screen time
+group_high_screen <- data %>%
+  filter(screen > 6)
+
+# Conduct one-sample t-test
+t_test_result <- t.test(group_high_screen$BMI, mu = 17.6, alternative = "greater")
+
+# Display the result
+t_test_result
+```

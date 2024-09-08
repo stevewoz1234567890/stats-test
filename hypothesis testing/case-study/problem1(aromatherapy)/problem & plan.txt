@@ -1,0 +1,29 @@
+Does aromatherapy foot massage reduce systolic blood pressure (SBP) in adults?
+
+Healthy Japanese adults
+->
+Baseline data:
+Group A: Foot massage ->(week4 data) Non-intervention (week8 data)
+Group B: Non-intervention ->(week4 data) Foot massage (week8 data)
+
+Data Structure:
+Analyse the design in terms of:
+•	Number and identity of comparison groups
+•	Type of comparison groups (matched vs. independent)
+•	Types of variables
+
+Variable: differences (after-before) in SBP
+parameter: mean
+
+Null hypothesis (Ho): 
+mu_diff = 0
+The mean difference in systolic blood pressure is zero.
+
+Alternative hypothesis (HA): 
+mu_diff < 0
+The mean difference in systolic blood pressure is less than zero.
+
+Data manipulation required calculating:	sysBPafter-sysi
+•	mean SBP (“mSBP”) from two measurements per individual for each time point
+•	differences in mSBP per individual to compare foot massage (‘after’) minus no intervention (‘before’) (paired comparison groups)
+•	differences in SBP paid attention to the group (treatment order randomization)
