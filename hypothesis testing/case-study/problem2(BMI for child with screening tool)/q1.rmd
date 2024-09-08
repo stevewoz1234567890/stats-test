@@ -35,7 +35,7 @@ library(dplyr)
 library(ggplot2)
 
 # Read the CSV file (replace with actual file path)
-data <- read.csv("D:/work/stats/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
+data <- read.csv("D:/work/stats-test/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
 
 # Filter the data to children with more than 6 hours of screen time
 group_high_screen <- data %>%
@@ -54,7 +54,7 @@ Question 3:
 library(dplyr)
 
 # Read the dataset
-data <- read.csv("D:/work/stats/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
+data <- read.csv("D:/work/stats-test/hypothesis testing/case-study/problem2(BMI for child with screening tool)/assign.csv")
 
 # Filter the data to children with more than 6 hours of screen time
 group_high_screen <- data %>%
